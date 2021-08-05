@@ -1,0 +1,331 @@
+#index-gallery{
+  width: 90vw;
+  padding:5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+
+  "img1 img2 img3"
+  "img4 img5 img6"
+  "img7 img8 img9"
+  "img10 img11 img12"
+  "img13 img14 img15"
+  "img16 img17 img18"
+  "img19 img20 img0";
+
+  max-height: 20rem;
+  overflow:hidden;
+
+  /* Set transitions up */
+-webkit-transition: max-height 0.7s;
+-moz-transition: max-height 0.7s;
+transition: max-height 0.7s;
+}
+
+#index-gallery .gallery-img {
+  width: 1fr;
+  height:28vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+
+#index-gallery.open{
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 90vw;
+
+  max-height: 2000px;
+  /* Set transitions up */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+}
+
+#show-more{
+  transition-duration: .5s;
+  background: #D9D9D9;
+  color: black;
+  font-family: Times New Roman;
+  display: block;
+  width: 8rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+#show-more:hover{
+  transition-duration: .5s;
+
+
+  cursor: pointer;
+
+  background: #b3b3b3;
+}
+
+.white-gradient{
+  pointer-events:none;
+  position: absolute;
+  z-index: 9;
+  margin-top: -190px;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to top,
+  rgba(255,255,255, 1) 20%,
+  rgba(255,255,255, 0) 80%
+  );}
+
+/* Gallery stuff */
+/* Popup window when clicked */
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:100;
+}
+.img-window img{
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+#current-img{
+  margin-top: -15vh;
+  margin-left: -2vw;
+}
+
+/* Next img */
+.img-btn-next {
+
+  display: block;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  bottom: 5vh;
+  right: 2rem;
+  z-index: 500;
+  font-size: 14pt;
+  color: white;
+  cursor: pointer;
+  text-transform:uppercase;
+  user-select: none;
+}
+
+.img-btn-next:hover {
+opacity: 0.8;
+}
+
+.img-btn-prev {
+  display: block;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  bottom: 5vh;
+  left: 2rem;
+  z-index: 500;
+  font-size: 14pt;
+  color: white;
+  cursor: pointer;
+  text-transform:uppercase;
+  user-select: none;
+}
+
+.img-btn-prev:hover {
+opacity: 0.8;
+}
+
+
+/* Images ______________________________________________________*/
+
+#index-gallery .img-1{
+  grid-area: img1;
+  background-image: url(img/Thumbnails/img1.jpg);
+}
+
+#index-gallery .img-2{
+  grid-area: img2;
+  background-image: url(img/Thumbnails/img2.jpg);
+}
+
+#index-gallery .img-3{
+  grid-area: img3;
+  background-image: url(img/Thumbnails/img3.jpg);
+}
+
+#index-gallery .img-4{
+  grid-area: img4;
+  background-image: url(img/Thumbnails/img4.jpg);
+}
+
+#index-gallery .img-5{
+  grid-area: img5;
+  background-image: url(img/Thumbnails/img5.jpg);
+}
+
+#index-gallery .img-6{
+  grid-area: img6;
+  background-image: url(img/Thumbnails/img6.jpg);
+}
+
+#index-gallery .img-7{
+  grid-area: img7;
+  background-image: url(img/Thumbnails/img7.jpg);
+}
+
+#index-gallery .img-8{
+  grid-area: img8;
+  background-image: url(img/Thumbnails/img8.jpg);
+}
+
+#index-gallery .img-9{
+  grid-area: img9;
+  background-image: url(img/Thumbnails/img9.jpg);
+}
+
+#index-gallery .img-10{
+  grid-area: img10;
+  background-image: url(img/Thumbnails/img10.jpg);
+}
+
+#index-gallery .img-11{
+  grid-area: img11;
+  background-image: url(img/Thumbnails/img11.jpg);
+}
+
+#index-gallery .img-12{
+  grid-area: img12;
+  background-image: url(img/Thumbnails/img12.jpg);
+}
+
+#index-gallery .img-13{
+  grid-area: img13;
+  background-image: url(img/Thumbnails/img13.jpg);
+}
+
+#index-gallery .img-14{
+  grid-area: img14;
+  background-image: url(img/Thumbnails/img14.jpg);
+}
+
+#index-gallery .img-15{
+  grid-area: img15;
+  background-image: url(img/Thumbnails/img15.jpg);
+}
+
+#index-gallery .img-16{
+  grid-area: img16;
+  background-image: url(img/Thumbnails/img16.jpg);
+}
+
+#index-gallery .img-17{
+  grid-area: img17;
+  background-image: url(img/Thumbnails/img17.jpg);
+}
+
+#index-gallery .img-18{
+  grid-area: img18;
+  background-image: url(img/Thumbnails/img18.jpg);
+}
+
+#index-gallery .img-19{
+  grid-area: img19;
+  background-image: url(img/Thumbnails/img19.jpg);
+}
+
+#index-gallery .img-20{
+  grid-area: img20;
+  background-image: url(img/Thumbnails/img20.jpg);
+}
+
+@media only screen and (min-width: 760px){
+  #index-gallery{max-height: 45rem;}
+}
+
+#current-img{
+  margin-top: 0vh;
+}
+
+@media only screen and (min-width: 800px){
+
+  #index-gallery{
+    width: 80vw;
+    padding:5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:
+
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8"
+    "img9 img10 img11 img12"
+    "img13 img14 img15 img16"
+    "img17 img18 img19 img20";
+
+    max-height: 50rem;
+
+    /* Set transitions up */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  }
+  #index-gallery.open{
+    width: 80vw;
+  }
+
+  .img-btn-prev {
+    padding: .5rem 1rem;
+    bottom: 45vh;
+    left: 2rem;
+  }
+  .img-btn-next {
+    padding: .5rem 1rem;
+    bottom: 45vh;
+    right: 2rem;
+  }
+
+  #show-more{
+    transition-duration: .5s;
+    background: #D9D9D9;
+    color: black;
+    font-family: Times New Roman;
+    display: block;
+    width: 200px;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    margin: 0px auto ;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+
+  #index-gallery .gallery-img{
+    height:18vw;
+    /* height: calc(80vw / 4); */
+  }
+
+  #index-gallery .gallery-img:hover{
+    transform: scale(1.025);
+    /* border-style: solid; */
+  }
+
+}

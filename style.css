@@ -1,0 +1,266 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  overflow-x: hidden;
+}
+
+/* Main title */
+h1 {
+  font-family: Times New Roman;
+  font-size: 25pt;
+  color: #262626;
+  text-align: center;
+
+  margin: auto;
+  padding-top: .5em;
+  padding-bottom: 1rem;
+  /* width: 50%; */
+}
+
+/* Subject Title */
+h2 {
+  font-family: Times New Roman;
+  font-weight: 200;
+  color: #303030;
+  font-size: 20pt;
+  text-align: center;
+
+  margin: auto;
+  padding-top: .25em;
+  width: 70%;
+}
+
+#PricingTitle{
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-family: Segoe UI;
+  font-style: regular;
+  font-weight: 400;
+  font-size: 14pt;
+  color: #707070;
+  text-align: center;
+  padding-top: 0rem;
+}
+
+.normal {
+  font-family: Segoe UI;
+  font-size: 14pt;
+  color: #707070;
+  text-align: center;
+
+  max-width: 65ch;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  margin: 0rem auto 10rem;
+
+}
+
+/* Auto Scrol adjust */
+#Pricing h2{
+  padding-top: 20pt;
+  margin-top: -20pt;
+}
+
+#Welcome h2{
+  padding-top: 20pt;
+  margin-top: -20pt;
+}
+
+#Gallery {
+  padding-top: 20pt;
+  margin-top: -20pt;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Top slideshow bar */
+.img-container {
+  margin-top: 0rem;
+  height: 33vw;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.img-container img {
+
+  left: 0;
+  object-fit: cover;
+  object-position: center -2vw;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+.img-container img.next {
+  opacity: 1;
+  z-index: 1;
+}
+
+.img-container img.prev {
+  opacity: 1;
+  z-index: 2;
+}
+
+.img-container img.fade-out {
+  opacity: 0;
+  /* Speed of the transition */
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+  visibility: hidden;
+}
+
+/* -------------------------------------------- */
+
+.pcontainer{
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 95vw;
+}
+.item {
+  text-align: center;
+  width: 48%;
+  margin-bottom: 25px;
+  font-size: 12pt;
+  font-family: Segoe UI;
+  color: #707070;
+  /* background: blue; */
+}
+
+.item img {
+  width: 100%;
+  box-shadow: 0 0 12px black;
+}
+
+.price{
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-size: 14pt;
+  color: #707070;
+  text-align: center;
+}
+
+.small_email{
+  background: none;
+  color: #707070;
+  font-size: 13pt;
+}
+
+.large2{
+
+  background-position: center;
+  background-size: cover;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 95vw;
+  width: 95vw;
+  box-shadow: 0 0 12px black;
+}
+
+#Weddings .large2{
+  background-image: url(img/filler.jpg);
+}
+
+#Postage .large2{
+  background-image: url(img/filler.jpg);
+}
+
+#Care .large2{
+  background-image: url(img/filler.jpg);
+}
+
+@media only screen and (min-width: 330px){
+  .small_email{
+    background: none;
+    color: #707070;
+    font-size: 16pt;
+  }
+
+  .normal {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 16pt;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+  .small_email{
+    font-size: 18pt;
+  }
+
+h1 {
+  font-size: 50pt;
+}
+
+.img-container {
+  height: 400px;
+}
+
+h2{
+  font-size: 30pt;
+}
+
+h3 {
+
+  font-size: 16pt;
+  color: #707070;
+  text-align: center;
+
+  /* margin: auto; */
+  padding-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+
+.large2{
+  height: 70vw;
+  max-height: 35rem;
+  width: clamp(calc(800px - 6rem),70%,1100px);
+
+}
+
+
+.pcontainer{
+  width: 80%;
+}
+.item {
+  width: 32%;
+  font-size: 14pt;
+}
+
+.logo{
+  order: 1;
+  font-size: 49pt;
+  padding-left: 0;
+  padding-top: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.img-container img {
+  object-position: center -2vw;
+}
+
+}

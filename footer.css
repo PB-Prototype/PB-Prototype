@@ -1,0 +1,108 @@
+
+
+footer {
+  background-color: #333333;
+  width: 100vw;
+  height: 24rem;
+
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+  font-size: 16px;
+  color: white;
+
+}
+
+.Fotter_Content {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 2rem;
+
+}
+.Footer_Logo{
+  float: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #333333;
+  padding-top: 1rem;
+}
+
+.Contact_Social{
+  float: left;
+  display: flex;
+  font-family: Segoe UI;
+  line-height: 20pt;
+  background-color: #333333;
+}
+
+
+.Social_Icons{
+  display: none;
+}
+
+.Social_Icons img{
+  width: 2rem;
+  height: auto;
+}
+
+@media only screen and (min-width: 330px){
+  .Social_Icons{
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+     padding-top: 7.5rem;
+     margin-left: 0rem;
+  }
+
+
+  footer {
+    height: 20rem;
+  }
+}
+
+@media only screen and (min-width: 397px){
+
+.Contact_Social{
+  padding-left: 5%;
+  padding-top: 1rem;
+}
+
+.Social_Icons{
+   padding-top: 5.6rem;
+   margin-left: -2rem;
+}
+
+
+}
+
+@media only screen and (min-width: 730px){
+  footer {
+    height: 17rem;
+    padding-top: 2rem;
+  }
+
+  .Contact_Social{
+    float: right;
+    padding-right: 0rem;
+
+  }
+
+  .Footer_Logo{
+    font-size: 50px;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 865px) {
+  .Contact_Social{
+    padding-right: 3rem;
+    font-size: 14pt;
+}
+.Footer_Logo{
+  font-size: 50px;
+  padding-left: 3rem;
+}
+
+
+}

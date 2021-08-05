@@ -1,0 +1,81 @@
+#navbar {
+  /* overflow: hidden; */
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 80;
+  width: 100vw;
+  height: 26pt;
+  /* height: auto; */
+
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-self: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  font-family: Segoe UI;
+  font-size: 14pt;
+  font-weight: regular;
+  color: #707070;
+  margin-left: 0vw;
+}
+
+nav a {
+
+  color: #707070;
+  display: block;
+  text-align: center;
+  padding: 0 14px;
+  text-decoration: none;
+  /* width: calc(200px); */
+  /* border-style: solid; */
+
+}
+
+nav a:hover {
+  /* color: #1f1f1f; */
+  font-weight: bold;
+  transition-duration: .1s;
+}
+
+
+#navbar_break{
+  user-select: none;
+}
+
+.sticky{
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 1rem;
+}
+
+.nav_welcome {width: 7rem;}
+
+.nav_blog {width: 4rem;}
+
+.nav_weddings {width: 12.5rem;}
+
+.nav_postage {width: 18rem;}
+
+.nav_pricing {width: 8rem;}
+
+.nav_care {width: 14rem;}
+
+.nav_gallery {width: 6rem;}
+
+
+
+@media only screen and (max-width: 1030px){
+#navbar{
+  display: flex;
+  flex: initial;
+}
+
+}
