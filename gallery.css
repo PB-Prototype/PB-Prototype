@@ -1,0 +1,704 @@
+#index-gallery{
+  width: 90vw;
+  padding:5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  /* This gives 4 collems. the fr stands for fractions and can be thought of a fraction of what we have*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+
+  "img84 img2 img47"
+  "img30 img5 img6"
+  "img7 img8 img9"
+  "img10 img11 img12"
+  "img13 img14 img15"
+  "img16 img17 img18"
+  "img19 img20 img21"
+  "img22 img23 img24"
+  "img25 img26 img27"
+  "img28 img29 img4"
+  "img31 img32 img33"
+  "img34 img35 img36"
+  "img37 img38 img39"
+  "img40 img41 img42"
+  "img43 img44 img45"
+  "img46 img3 img48"
+  "img49 img50 img51"
+  "img52 img53 img54"
+  "img55 img56 img57"
+  "img58 img59 img60"
+  "img61 img62 img63"
+  "img64 img65 img66"
+  "img67 img68 img69"
+  "img70 img71 img72"
+  "img73 img74 img75"
+  "img76 img77 img78"
+  "img79 img80 img81"
+  "img82 img83 img1"
+  "img85 img86 img87"
+  "img88 img89 img90";
+
+  max-height: 90vw;
+  overflow:hidden;
+
+  /* Set transitions up */
+-webkit-transition: max-height 1s;
+-moz-transition: max-height 1s;
+transition: max-height 1s;
+}
+
+#index-gallery .gallery-img {
+  width: 1fr;
+  height:28vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#index-gallery .gallery-img:hover{
+  /* transform: scale(1.05); */
+}
+
+#index-gallery.open{
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 90vw;
+
+  max-height: 2000rem;
+  /* Set transitions up */
+  -webkit-transition: max-height 5s;
+  -moz-transition: max-height 5s;
+  transition: max-height 5s;
+}
+
+#show-more{
+  transition-duration: 5s;
+  color: black;
+  font-family: Times New Roman;
+  display: block;
+  width: 8rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  margin: 1rem auto;
+  cursor: pointer;
+
+  background: #ff99db;
+}
+
+#show-more:hover{
+  background: #ff6ecc;
+}
+
+.white-gradient{
+  pointer-events:none;
+  position: absolute;
+  z-index: 10;
+  margin-top: -190px;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to top,
+  rgba(255,255,255, 1) 20%,
+  rgba(255,255,255, 0) 80%
+  );}
+
+/* Gallery stuff */
+/* Popup window when clicked */
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:100;
+}
+
+.img-window img{
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+#current-img{
+  margin-top: -15vh;
+  margin-left: -2vw;
+}
+
+/* Next img */
+.img-btn-next {
+
+  display: block;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  bottom: 5vh;
+  right: 2rem;
+  z-index: 500;
+  font-size: 14pt;
+  color: white;
+  cursor: pointer;
+  text-transform:uppercase;
+  user-select: none;
+}
+
+.img-btn-next:hover {
+opacity: 0.8;
+}
+
+.img-btn-prev {
+  display: block;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  bottom: 5vh;
+  left: 2rem;
+  z-index: 500;
+  font-size: 14pt;
+  color: white;
+  cursor: pointer;
+  text-transform:uppercase;
+  user-select: none;
+}
+
+.img-btn-prev:hover {
+opacity: 0.8;
+}
+
+
+/* Images ______________________________________________________*/
+
+#index-gallery .img-1{
+  grid-area: img1;
+  background-image: url(img/thumbnails/1img.jpg);
+}
+
+#index-gallery .img-2{
+  grid-area: img2;
+  background-image: url(img/thumbnails/2img.jpg);
+}
+
+#index-gallery .img-3{
+  grid-area: img3;
+  background-image: url(img/thumbnails/3img.jpg);
+}
+
+#index-gallery .img-4{
+  grid-area: img4;
+  background-image: url(img/thumbnails/4img.jpg);
+}
+
+#index-gallery .img-5{
+  grid-area: img5;
+  background-image: url(img/thumbnails/5img.jpg);
+}
+
+#index-gallery .img-6{
+  grid-area: img6;
+  background-image: url(img/thumbnails/6img.jpg);
+}
+
+#index-gallery .img-7{
+  grid-area: img7;
+  background-image: url(img/thumbnails/7img.jpg);
+}
+
+#index-gallery .img-8{
+  grid-area: img8;
+  background-image: url(img/thumbnails/8img.jpg);
+}
+
+#index-gallery .img-9{
+  grid-area: img9;
+  background-image: url(img/thumbnails/9img.jpg);
+}
+
+#index-gallery .img-10{
+  grid-area: img10;
+  background-image: url(img/thumbnails/10img.jpg);
+}
+
+#index-gallery .img-11{
+  grid-area: img11;
+  background-image: url(img/thumbnails/11img.jpg);
+}
+
+#index-gallery .img-12{
+  grid-area: img12;
+  background-image: url(img/thumbnails/12img.jpg);
+}
+
+#index-gallery .img-13{
+  grid-area: img13;
+  background-image: url(img/thumbnails/13img.jpg);
+}
+
+#index-gallery .img-14{
+  grid-area: img14;
+  background-image: url(img/thumbnails/14img.jpg);
+}
+
+#index-gallery .img-15{
+  grid-area: img15;
+  background-image: url(img/thumbnails/15img.jpg);
+}
+
+#index-gallery .img-16{
+  grid-area: img16;
+  background-image: url(img/thumbnails/16img.jpg);
+}
+
+#index-gallery .img-17{
+  grid-area: img17;
+  background-image: url(img/thumbnails/17img.jpg);
+}
+
+#index-gallery .img-18{
+  grid-area: img18;
+  background-image: url(img/thumbnails/18img.jpg);
+}
+
+#index-gallery .img-19{
+  grid-area: img19;
+  background-image: url(img/thumbnails/19img.jpg);
+}
+
+#index-gallery .img-20{
+  grid-area: img20;
+  background-image: url(img/thumbnails/20img.jpg);
+}
+
+#index-gallery .img-21{
+  grid-area: img21;
+  background-image: url(img/thumbnails/21img.jpg);
+}
+
+#index-gallery .img-22{
+  grid-area: img22;
+  background-image: url(img/thumbnails/22img.jpg);
+}
+
+#index-gallery .img-23{
+  grid-area: img23;
+  background-image: url(img/thumbnails/23img.jpg);
+}
+
+#index-gallery .img-24{
+  grid-area: img24;
+  background-image: url(img/thumbnails/24img.jpg);
+}
+
+#index-gallery .img-25{
+  grid-area: img25;
+  background-image: url(img/thumbnails/25img.jpg);
+}
+
+#index-gallery .img-26{
+  grid-area: img26;
+  background-image: url(img/thumbnails/26img.jpg);
+}
+
+#index-gallery .img-27{
+  grid-area: img27;
+  background-image: url(img/thumbnails/27img.jpg);
+}
+
+#index-gallery .img-28{
+  grid-area: img28;
+  background-image: url(img/thumbnails/28img.jpg);
+}
+
+#index-gallery .img-29{
+  grid-area: img29;
+  background-image: url(img/thumbnails/29img.jpg);
+}
+
+#index-gallery .img-30{
+  grid-area: img30;
+  background-image: url(img/thumbnails/30img.jpg);
+}
+
+#index-gallery .img-31{
+  grid-area: img31;
+  background-image: url(img/thumbnails/31img.jpg);
+}
+
+#index-gallery .img-32{
+  grid-area: img32;
+  background-image: url(img/thumbnails/32img.jpg);
+}
+
+#index-gallery .img-33{
+  grid-area: img33;
+  background-image: url(img/thumbnails/33img.jpg);
+}
+
+#index-gallery .img-34{
+  grid-area: img34;
+  background-image: url(img/thumbnails/34img.jpg);
+}
+
+#index-gallery .img-35{
+  grid-area: img35;
+  background-image: url(img/thumbnails/35img.jpg);
+}
+
+#index-gallery .img-36{
+  grid-area: img36;
+  background-image: url(img/thumbnails/36img.jpg);
+}
+
+#index-gallery .img-37{
+  grid-area: img37;
+  background-image: url(img/thumbnails/37img.jpg);
+}
+
+#index-gallery .img-38{
+  grid-area: img38;
+  background-image: url(img/thumbnails/38img.jpg);
+}
+
+#index-gallery .img-39{
+  grid-area: img39;
+  background-image: url(img/thumbnails/39img.jpg);
+}
+
+#index-gallery .img-40{
+  grid-area: img40;
+  background-image: url(img/thumbnails/40img.jpg);
+}
+
+#index-gallery .img-41{
+  grid-area: img41;
+  background-image: url(img/thumbnails/41img.jpg);
+}
+
+#index-gallery .img-42{
+  grid-area: img42;
+  background-image: url(img/thumbnails/42img.jpg);
+}
+
+#index-gallery .img-43{
+  grid-area: img43;
+  background-image: url(img/thumbnails/43img.jpg);
+}
+
+#index-gallery .img-44{
+  grid-area: img44;
+  background-image: url(img/thumbnails/44img.jpg);
+}
+
+#index-gallery .img-45{
+  grid-area: img45;
+  background-image: url(img/thumbnails/45img.jpg);
+}
+
+#index-gallery .img-46{
+  grid-area: img46;
+  background-image: url(img/thumbnails/46img.jpg);
+}
+
+#index-gallery .img-47{
+  grid-area: img47;
+  background-image: url(img/thumbnails/47img.jpg);
+}
+
+#index-gallery .img-48{
+  grid-area: img48;
+  background-image: url(img/thumbnails/48img.jpg);
+}
+
+#index-gallery .img-49{
+  grid-area: img49;
+  background-image: url(img/thumbnails/49img.jpg);
+}
+
+#index-gallery .img-50{
+  grid-area: img50;
+  background-image: url(img/thumbnails/50img.jpg);
+}
+
+#index-gallery .img-51{
+  grid-area: img51;
+  background-image: url(img/thumbnails/51img.jpg);
+}
+
+#index-gallery .img-52{
+  grid-area: img52;
+  background-image: url(img/thumbnails/52img.jpg);
+}
+
+#index-gallery .img-53{
+  grid-area: img53;
+  background-image: url(img/thumbnails/53img.jpg);
+}
+
+#index-gallery .img-54{
+  grid-area: img54;
+  background-image: url(img/thumbnails/54img.jpg);
+}
+
+#index-gallery .img-55{
+  grid-area: img55;
+  background-image: url(img/thumbnails/55img.jpg);
+}
+
+#index-gallery .img-56{
+  grid-area: img56;
+  background-image: url(img/thumbnails/56img.jpg);
+}
+
+#index-gallery .img-57{
+  grid-area: img57;
+  background-image: url(img/thumbnails/57img.jpg);
+}
+
+#index-gallery .img-58{
+  grid-area: img58;
+  background-image: url(img/thumbnails/58img.jpg);
+}
+
+#index-gallery .img-59{
+  grid-area: img59;
+  background-image: url(img/thumbnails/59img.jpg);
+}
+
+#index-gallery .img-60{
+  grid-area: img60;
+  background-image: url(img/thumbnails/60img.jpg);
+}
+
+#index-gallery .img-61{
+  grid-area: img61;
+  background-image: url(img/thumbnails/61img.jpg);
+}
+
+#index-gallery .img-62{
+  grid-area: img62;
+  background-image: url(img/thumbnails/62img.jpg);
+}
+
+#index-gallery .img-63{
+  grid-area: img63;
+  background-image: url(img/thumbnails/63img.jpg);
+}
+
+#index-gallery .img-64{
+  grid-area: img64;
+  background-image: url(img/thumbnails/64img.jpg);
+}
+
+#index-gallery .img-65{
+  grid-area: img65;
+  background-image: url(img/thumbnails/65img.jpg);
+}
+
+#index-gallery .img-66{
+  grid-area: img66;
+  background-image: url(img/thumbnails/66img.jpg);
+}
+
+#index-gallery .img-67{
+  grid-area: img67;
+  background-image: url(img/thumbnails/67img.jpg);
+}
+
+#index-gallery .img-68{
+  grid-area: img68;
+  background-image: url(img/thumbnails/68img.jpg);
+}
+
+#index-gallery .img-69{
+  grid-area: img69;
+  background-image: url(img/thumbnails/69img.jpg);
+}
+
+#index-gallery .img-70{
+  grid-area: img70;
+  background-image: url(img/thumbnails/70img.jpg);
+}
+
+#index-gallery .img-71{
+  grid-area: img71;
+  background-image: url(img/thumbnails/71img.jpg);
+}
+
+#index-gallery .img-72{
+  grid-area: img72;
+  background-image: url(img/thumbnails/72img.jpg);
+}
+
+#index-gallery .img-73{
+  grid-area: img73;
+  background-image: url(img/thumbnails/73img.jpg);
+}
+
+#index-gallery .img-74{
+  grid-area: img74;
+  background-image: url(img/thumbnails/74img.jpg);
+}
+
+#index-gallery .img-75{
+  grid-area: img75;
+  background-image: url(img/thumbnails/75img.jpg);
+}
+
+#index-gallery .img-76{
+  grid-area: img76;
+  background-image: url(img/thumbnails/76img.jpg);
+}
+
+#index-gallery .img-77{
+  grid-area: img77;
+  background-image: url(img/thumbnails/77img.jpg);
+}
+
+#index-gallery .img-78{
+  grid-area: img78;
+  background-image: url(img/thumbnails/78img.jpg);
+}
+
+#index-gallery .img-79{
+  grid-area: img79;
+  background-image: url(img/thumbnails/79img.jpg);
+}
+
+#index-gallery .img-80{
+  grid-area: img80;
+  background-image: url(img/thumbnails/80img.jpg);
+}
+
+#index-gallery .img-81{
+  grid-area: img81;
+  background-image: url(img/thumbnails/81img.jpg);
+}
+
+#index-gallery .img-82{
+  grid-area: img82;
+  background-image: url(img/thumbnails/82img.jpg);
+}
+
+#index-gallery .img-83{
+  grid-area: img83;
+  background-image: url(img/thumbnails/83img.jpg);
+}
+
+#index-gallery .img-84{
+  grid-area: img84;
+  background-image: url(img/thumbnails/84img.jpg);
+}
+
+#index-gallery .img-85{
+  grid-area: img85;
+  background-image: url(img/thumbnails/85img.jpg);
+}
+
+#index-gallery .img-86{
+  grid-area: img86;
+  background-image: url(img/thumbnails/86img.jpg);
+}
+
+#index-gallery .img-87{
+  grid-area: img87;
+  background-image: url(img/thumbnails/87img.jpg);
+}
+
+#index-gallery .img-88{
+  grid-area: img88;
+  background-image: url(img/thumbnails/88img.jpg);
+}
+
+#index-gallery .img-89{
+  grid-area: img89;
+  background-image: url(img/thumbnails/89img.jpg);
+}
+
+#index-gallery .img-90{
+  grid-area: img90;
+  background-image: url(img/thumbnails/90img.jpg);
+}
+
+@media only screen and (min-width: 768px){
+
+  #index-gallery{
+    width: 80vw;
+    padding:5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:
+
+    "img84 img2 img47 img30"
+    "img5 img6 img7 img8"
+    "img9 img10 img11 img12"
+    "img13 img14 img15 img16"
+    "img17 img18 img19 img20"
+    "img21 img22 img23 img24"
+    "img25 img26 img27 img28"
+    "img29 img4 img31 img32"
+    "img33 img34 img35 img36"
+    "img37 img38 img39 img40"
+    "img41 img42 img43 img44"
+    "img45 img46 img3 img48"
+    "img49 img50 img51 img52"
+    "img53 img54 img55 img56"
+    "img57 img58 img59 img60"
+    "img61 img62 img63 img64"
+    "img65 img66 img67 img68"
+    "img69 img70 img71 img72"
+    "img73 img74 img75 img76"
+    "img77 img78 img79 img80"
+    "img81 img82 img83 img1"
+    "img85 img86 img87 img88"
+    "img89 img90 img0  img0";
+
+    max-height: 50rem;
+
+    /* Set transitions up */
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  transition: max-height 1s;
+  }
+  #index-gallery.open{
+    width: 80vw;
+  }
+
+  .img-btn-prev {
+    padding: .5rem 1rem;
+    bottom: 45vh;
+    left: 5vw;
+  }
+  .img-btn-next {
+    padding: .5rem 1rem;
+    bottom: 45vh;
+    right: 5vw;
+  }
+
+  #index-gallery .gallery-img {
+    height:18vw;
+  }
+
+  #show-more{
+    width: 200px;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  #index-gallery .gallery-img:hover{
+    transform: scale(1.05);
+  }
+
+}
