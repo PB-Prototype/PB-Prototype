@@ -1,0 +1,208 @@
+#adobe-dc-view{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  box-shadow: 0 0 12px black;
+}
+
+.newsBody {
+  font-family: Segoe UI, Open Sans , arial;
+  font-size: 22px;
+  color: #595959;
+  text-align: center;
+
+  max-width: 70ch;
+  padding-left: .5rem;
+  padding-right: .5rem;
+
+  margin: 0rem auto 10rem;
+}
+
+
+
+/* HEADER*/
+.underlineHeader{
+  border-bottom: 3px #2e4435 solid;
+  width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+  /* HEADLINE MAIN */
+  .headlineBorderM {
+    width: 90vw;
+    max-width: 75rem;
+    height: 40rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 5rem;
+
+    outline: solid #2e4435 3px;
+    outline-offset: -10px;
+    background-color: white;
+    box-shadow: 0 0 12px black;
+  }
+
+  .headlineLayoutM{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .headlineImageM{
+    margin-top: 1rem;
+    margin-right:1rem;
+
+    display: block;
+    max-width: 48rem;
+    /* max-height: 35rem; */
+    /* height: 100%; */
+    overflow: hidden;
+    box-shadow: 0 0 12px black;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .headlineImageM img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .headlineTextM{
+  min-width: 10rem;
+  max-width: 20rem;
+  text-align: center;
+  /* border: red solid; */
+  }
+
+  .headlineTitle1{
+    font-family: Times New Roman;
+    font-style: regular;
+
+    font-weight: 400;
+    font-size: 30pt;
+    color: #1a4522;
+
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #headlineBody{
+    height: 28rem;
+    overflow: hidden;
+  }
+
+  .underline {
+    border-bottom: 2px #2e4435 solid;
+    width: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  .newsletterLink{
+    font-size: 20px;
+    margin-top: 2rem;
+    padding: .5rem 3rem;
+    background: #1a4522;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+  }
+  .white-gradient2{
+      pointer-events:none;
+      position: absolute;
+      z-index: 1;
+      margin-top: -190px;
+      width: 40rem;
+      height: 200px;
+      background-image: linear-gradient(to top,
+      rgba(255,255,255, 1) 20%,
+      rgba(255,255,255, 0) 80%
+      );}
+
+  .titleContainer {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+  .newsletterBody {
+    font-family: Segoe UI, Open Sans , arial;
+    font-size: 18px;
+    color: #595959;
+    text-align: center;
+    padding: 0rem 2rem;
+  }
+
+/* Main section */
+.newsMain {
+  display: flex;
+
+}
+
+.sidePanel{
+  width: 150rem;
+  padding-right: 1rem;
+  padding-left: 5rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-right: 2px #2e4435 solid;
+}
+
+.mainPanel{
+  padding-left: 2rem;
+  padding-top: 3rem;
+  padding-right: 5rem;
+}
+
+.flowersOfTheMonth{
+
+  padding-left: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-right: 10px;
+  /* width: 100rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "fotmI4 fotmI2 fotmI3"
+  "fotmI1 fotmI8 fotmI5"
+  "fotmI6 fotmI7 fotmI0";
+  overflow: hidden;
+  /* padding: 10px; */
+
+}
+
+.flowersOfTheMonthImage{
+  overflow: hidden;
+  height: 18rem;
+  object-position: top;
+  box-shadow: 0 0 6px black;
+
+}
+
+.flowersOfTheMonthImage img{
+  width: 100%;
+  height: 100%;
+  object-position: top;
+
+}
+
+#fotmI1 {grid-area: fotmI1;}
+#fotmI2 {grid-area: fotmI2;}
+#fotmI3 {grid-area: fotmI3;}
+#fotmI4 {grid-area: fotmI4;}
+#fotmI5 {grid-area: fotmI5;}
+#fotmI6 {grid-area: fotmI6;}
+#fotmI7 {grid-area: fotmI7;}
+#fotmI8 {grid-area: fotmI8;}
