@@ -1,0 +1,134 @@
+#navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 80;
+  width: 100vw;
+  height: 26pt;
+  }
+
+.navbar_inner{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+
+  font-family: Segoe UI, Open Sans , arial;
+  font-size: 14pt;
+  font-weight: regular;
+  color: #707070;
+  margin-left: 0vw;
+
+
+  }
+
+nav a {
+  color: #ea5ec3;
+  display: block;
+  text-align: center;
+  padding: 0 14px;
+  text-decoration: none;
+  transition-duration: 2s;
+}
+
+nav a:hover {
+  color: #d631a8;
+  transition-duration: .5s;
+}
+
+
+.navbar_break{
+  user-select: none;
+  /* display: none;  */
+}
+
+.sticky{
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+
+
+.toggle_button{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  cursor: pointer;
+  top: .75rem;
+  right: 2rem;
+  width: 50px;
+  height: 21px;
+}
+
+.span_bar{
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.email_icon{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px){
+/* @media only screen and (max-width: 500px){ */
+  .email_icon{
+    display: block;
+    position: fixed;
+    height: 35px;
+    width: 35px;
+    z-index: 80;
+    left: 2rem;
+    top: .5rem;
+  }
+
+.navbar_break{
+  display: none;
+}
+
+.toggle_button{
+  display: flex;
+  float: right;
+}
+
+#navbar {
+  position: fixed;
+  flex-direction: column;
+  display: flex;
+  align-content: flex-end;
+  z-index: 80;
+  width: inherit;
+  right: 0;
+  top: 0;
+
+  margin-left: 0;
+  margin-right: 0rem;
+  padding-bottom: 1rem;
+
+  /* transition-duration: 1s; */
+}
+
+
+
+ .navbar_inner{
+  display: none;
+  flex-direction: column;
+  width: inherit;
+  margin-top: 4rem;
+  margin-right: 0rem;
+
+}
+
+.navbar_inner li a{
+  text-align: right;
+  padding-right: 2.8rem;
+  padding-bottom: 1rem;
+  color: black;
+  /* border-top-style: solid; */
+}
+
+.navbar_inner.active{
+    display: flex;
+    align-content: flex-end;
+}
