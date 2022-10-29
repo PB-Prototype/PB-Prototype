@@ -1,103 +1,98 @@
 // Expanding tab
-var content = document.getElementById("index-gallery");
+var content = document.getElementById("gallery");
 var button = document.getElementById("show-more");
 
 button.onclick = function(){
 
-  if(content.className == "open"){
-    content.className = "";
+  if(content.className == "more"){
+    content.className = "less";
     button.innerHTML = "Show More";
   } else {
-    content.className ="open";
+    content.className ="more";
     button.innerHTML = "Show Less";
   }
 };
 
-
-
 //gallery _____________________________________________________
+const numberofImages = 109; //type in number of images
+let galleryDiv = ""; // the html that is going to display the thumbnails
+let buttonG = false; // checks to see if user clicks next or prev so that the gallery doesn't close down
+let indexShift = 0; //adjusts for when the user clicks next or previous
+let indexLocation = 0; //what image is being displayed
 
-let galleryImages = document.querySelectorAll(".gallery-img");
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
 
+//creates gallery
+for (let i = 1; i <= numberofImages; i++) {
+  //makes number of images specified with corolating numbers
+  galleryDiv += `<img id = "img${i}" loading = "lazy" src="img/thumbnails/${i}img.jpg">`;
+}
+//comits code to html
+document.getElementById('gallery').innerHTML = galleryDiv;
 
-if(galleryImages){
-  galleryImages.forEach(function(image, index){
-    image.onclick = function(){
-      let getElementCss = window.getComputedStyle(image);
-      let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-      let getImgUrlPos = getFullImgUrl.split("/img/thumbnails/");
-      let setNewImgUrl = getImgUrlPos[1].replace('")', '');
+//button for images.
+for (let i = 1; i <= numberofImages; i++) {
 
-      getLatestOpenedImg = index + 1;
-
-      let container = document.body;
-      let newImgWindow = document.createElement("div");
-      container.appendChild(newImgWindow);
-      newImgWindow.setAttribute("class", "img-window");
-      newImgWindow.setAttribute("onclick", "closeImg()");
-
-      let newImg = document.createElement("img");
-      newImgWindow.appendChild(newImg);
-      newImg.setAttribute("src","img/gallery/" + setNewImgUrl);
-      newImg.setAttribute("id","current-img");
-
-      //I think you don't need this line
-      newImg.onload = function(){
-        let imgWidth = this.width;
-        // let calcImgToEdge = ((windowWidth - imgWidth)/2) - 80;
-
-        let newPrevBtn = document.createElement("a");
-        let btnPrevText = document.createTextNode("Prev")
-        newPrevBtn.appendChild(btnPrevText);
-        container.appendChild(newPrevBtn);
-        newPrevBtn.setAttribute("class", "img-btn-prev");
-        newPrevBtn.setAttribute("onclick", "changeImg(0)");
-        // newPrevBtn.style.cssText = "left:" + "100" + "px;";
-
-        let newNextBtn = document.createElement("a");
-        let btnNextText = document.createTextNode("Next")
-        newNextBtn.appendChild(btnNextText);
-        container.appendChild(newNextBtn);
-        newNextBtn.setAttribute("class", "img-btn-next");
-        newNextBtn.setAttribute("onclick", "changeImg(1)");
-        // newNextBtn.style.cssText = "right:" + "100" + "px;";
-      }
-
-    }
+  document.getElementById("img" + i).addEventListener("click", function () {
+  openGallery(i); //this just makes it look neet
   });
 }
 
-function closeImg(){
-  document.querySelector(".img-window").remove();
-  document.querySelector(".img-btn-next").remove();
-  document.querySelector(".img-btn-prev").remove();
-}
-function changeImg(changeDir) {
-  document.querySelector("#current-img").remove();
+//opens gallery
+function openGallery(i) {
 
-  let getImgWindow = document.querySelector(".img-window");
-  let newImg = document.createElement("img");
-  getImgWindow.appendChild(newImg);
-
-  let calcNewImg;
-  if(changeDir === 1) {
-      calcNewImg = getLatestOpenedImg + 1;
-      if(calcNewImg > galleryImages.length) {
-          calcNewImg = 1;
-      }
+  //calculates the image that should be displayed
+  indexLocation = Number(i + indexShift);
+  //makes index location loop around
+  if (indexLocation > numberofImages) {
+    indexLocation -= numberofImages;
   }
-  else if(changeDir === 0) {
-      calcNewImg = getLatestOpenedImg - 1;
-      if(calcNewImg < 1) {
-          calcNewImg = galleryImages.length;
-      }
+  if (indexLocation < 1) {
+    indexLocation += numberofImages;
   }
-  newImg.setAttribute("src", "img/gallery/" + calcNewImg + "img.jpg");
-  newImg.setAttribute("id", "current-img");
 
-  getLatestOpenedImg = calcNewImg;
+  //adds full resolution image
+  let fullImageHtml = `<img class = "imageLarge" src="img/gallery/${indexLocation}img.jpg">`;
+  let fullImage = document.querySelector('#galleryFull').innerHTML = fullImageHtml;
 
+  //adds background
+  let galleryFull = document.querySelector('#galleryFull');
+  galleryFull.classList.add('galleryFullOpen');
+
+  //adds html for arrows
+  let arrows = `<a class="arrows" id="prev">Prev</a><a class="arrows" id="next">Next</a>`;
+  document.querySelector('#galleryFull').innerHTML += arrows;
+
+  //adds functionality to the arrows
+  document.querySelector('#prev').addEventListener("click", function () {
+      buttonG = true;
+      indexShift -= 1;
+      openGallery(i);
+  });
+  document.querySelector('#next').addEventListener("click", function () {
+    buttonG = true;
+    indexShift += 1;
+    openGallery(i);
+  });
 
 }
+
+//closes open gallery if screen is clicked
+galleryFull.addEventListener("click", function(){
+  //if screen clicked close open gallery unless next or previous button is also clicked.
+  if (buttonG == false) {
+
+      galleryFull.classList.add("closing");
+      setTimeout(closing, 500);
+
+      function closing() {
+        galleryFull.classList.remove("closing");
+        document.querySelector('#galleryFull').innerHTML = "";
+        galleryFull.classList.remove('galleryFullOpen');
+        indexShift = 0;
+
+    }
+  }
+    else {
+      buttonG = false; // turns button to false so that the user doesn't get stuck
+    }
+});
