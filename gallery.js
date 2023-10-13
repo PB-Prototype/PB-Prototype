@@ -14,7 +14,7 @@ button.onclick = function(){
 };
 
 //gallery _____________________________________________________
-const numberofImages = 109; //type in number of images
+const numberofImages = 124; //type in number of images
 let galleryDiv = ""; // the html that is going to display the thumbnails
 let buttonG = false; // checks to see if user clicks next or prev so that the gallery doesn't close down
 let indexShift = 0; //adjusts for when the user clicks next or previous

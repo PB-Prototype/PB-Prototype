@@ -1,3 +1,5 @@
+
+
 .short{
   display: inline-block;
 }
@@ -25,6 +27,7 @@
   box-sizing: border-box;
   caret-color: transparent;
 }
+
 body{
   overflow-x: hidden;
 }
@@ -50,7 +53,7 @@ h2 {
   color: #303030;
   font-size: 20pt;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   margin: auto;
   padding-top: 2rem;
@@ -82,6 +85,10 @@ h3 {
   padding-left: .5rem;
   padding-right: .5rem;
   margin: 0rem auto 10rem;
+}
+
+.normalS{
+  margin-bottom: 4rem;
 }
 
 /* Auto Scrol adjust */
@@ -160,17 +167,24 @@ html {
 
 /* -------------------------------------------- */
 
+
+
+
 .pcontainer{
   margin-left: auto;
   margin-right: auto;
   width: 95vw;
 
+  /* align-items: center; */
   display: flex;
   flex-wrap: wrap;
   flex-flow: wrap;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: space-between;
+
 }
+
+
 
 .item {
   text-align: center;
@@ -259,6 +273,28 @@ html {
 
 @media only screen and (min-width: 768px){
 
+  .wide2 {
+   justify-content: space-around;
+  }
+
+  .wide2 .item {
+     width: 35%;
+  }
+
+  .wide2Christmas{
+    justify-content: space-around;}
+
+  .wide2Christmas .item{
+    width: 35%;}
+
+.wide2Weddings{
+  justify-content: space-around;
+}
+
+.wide2Weddings .item{
+  width: 45%;
+}
+
   .normal{
     font-size: 22px;
   }
@@ -291,10 +327,10 @@ h3 {
 
 .pcontainer{
   width: 90vw;
-  max-width: 65rem;
+  max-width: 55rem;
 }
 .item {
-  width: 48%;
+  width: 30%;
   font-size: 14pt;
 }
 
@@ -313,4 +349,15 @@ h3 {
 
 .menu_gap {
 height: 26pt;
+}
+
+/* .wide2 {
+ justify-content: center;
+
+}
+
+.wide2 .item {
+   width: 35%;
+} */
+
 }
