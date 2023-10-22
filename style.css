@@ -1,12 +1,5 @@
 
 
-.short{
-  display: inline-block;
-}
-.long{
-  display: none;
-}
-
 #flowersFromTheFarm{
   width:15rem;
   max-width: 70vw;
@@ -167,29 +160,31 @@ html {
 
 /* -------------------------------------------- */
 
-
-
-
-.pcontainer{
-  margin-left: auto;
-  margin-right: auto;
-  width: 95vw;
-
-  /* align-items: center; */
-  display: flex;
+.itemLayout1{
+  display:flex;
+  justify-content: center;
+  gap: .6rem;
+  width: 90vw;
+  max-width: 55rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 0;
   flex-wrap: wrap;
-  flex-flow: wrap;
-  /* align-items: flex-start; */
-  justify-content: space-between;
-
 }
-
-
+.itemLayout2{
+  display:flex;
+  justify-content: center;
+  gap: .6rem;
+  width: 90vw;
+  max-width: 55rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
 
 .item {
   text-align: center;
   width: 48%;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   font-size: 12pt;
   font-family: Segoe UI, Open Sans , arial;
   color: #707070;
@@ -199,6 +194,14 @@ html {
   width: 100%;
   height: auto;
   box-shadow: 0 0 12px black;
+}
+
+/* Makes multiple line corectly*/
+.short{
+  display: inline-block;
+}
+.long{
+  display: none;
 }
 
 .price{
@@ -245,6 +248,16 @@ html {
 
 
 @media only screen and (min-width: 330px){
+
+.itemLayout1{
+  gap: .7rem;
+}
+.itemLayout2{
+  gap: .7rem;
+}
+
+
+
   .small_email{
     background: none;
     color: #707070;
@@ -257,9 +270,20 @@ html {
   }
 
 
+
 }
 
 @media only screen and (min-width: 450px){
+
+  .itemLayout1{
+    gap: 2rem;
+  }
+
+  .itemLayout1 .item {
+    width: 45%;
+  }
+
+
 
   .short{
     display: none;
@@ -270,94 +294,60 @@ html {
 
 }
 
-
 @media only screen and (min-width: 768px){
 
-  .wide2 {
-   justify-content: space-around;
+  .itemLayout1 .item {
+    width: 30%;
   }
 
-  .wide2 .item {
-     width: 35%;
+  .itemLayout2x2 .item {
+    width: 40%;
   }
 
-  .wide2Christmas{
-    justify-content: space-around;}
+    .normal{
+      font-size: 22px;
+    }
 
-  .wide2Christmas .item{
-    width: 35%;}
+    .small_email{
+      font-size: 18pt;
+    }
 
-.wide2Weddings{
-  justify-content: space-around;
-}
-
-.wide2Weddings .item{
-  width: 45%;
-}
-
-  .normal{
-    font-size: 22px;
+  h1 {
+    font-size: 50pt;
+    transition-duration: .5s;
   }
 
-  .small_email{
-    font-size: 18pt;
+
+
+  h2{
+    font-size: 30pt;
   }
 
-h1 {
-  font-size: 50pt;
-  transition-duration: .5s;
-}
+  h3 {
+
+    font-size: 16pt;
+    color: #707070;
+    text-align: center;
+
+    padding-top: 0.5rem;
+  }
 
 
 
-h2{
-  font-size: 30pt;
-}
+  .logo{
+    order: 1;
+    font-size: 49pt;
+    padding-left: 0;
+    padding-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-h3 {
+  .img-container img {
+    object-position: center -2vw;
+  }
 
-  font-size: 16pt;
-  color: #707070;
-  text-align: center;
-
-  padding-top: 0.5rem;
-}
-
-
-
-.pcontainer{
-  width: 90vw;
-  max-width: 55rem;
-}
-.item {
-  width: 30%;
-  font-size: 14pt;
-}
-
-.logo{
-  order: 1;
-  font-size: 49pt;
-  padding-left: 0;
-  padding-top: 2rem;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.img-container img {
-  object-position: center -2vw;
-}
-
-.menu_gap {
-height: 26pt;
-}
-
-/* .wide2 {
- justify-content: center;
-
-}
-
-.wide2 .item {
-   width: 35%;
-} */
-
+  .menu_gap {
+  height: 26pt;
+  }
 }
